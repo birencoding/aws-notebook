@@ -1,0 +1,28 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "CDKFullBootstrapAccess",
+			"Effect": "Allow",
+			"Action": [
+				"iam:*",
+				"cloudformation:*",
+				"ssm:*",
+				"s3:*",
+				"sts:AssumeRole"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ecr:CreateRepository",
+				"ecr:PutLifecyclePolicy",
+				"ecr:SetRepositoryPolicy",
+				"ecr:DescribeRepositories",
+				"ecr:TagResource"
+			],
+			"Resource": "*"
+		}
+	]
+}
